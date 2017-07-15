@@ -11,7 +11,7 @@ import org.apache.commons.lang.StringUtils;
 public enum ZuulFilterTypeEnums {
 
     PRE("pre","在请求被路由之前调用"),
-    ROUTING("routing","在路由请求时候被调用"),
+    ROUTING("route","在路由请求时候被调用"),
     POST("post","在routing和error过滤器之后被调用"),
     ERROR("error","处理请求时发生错误时被调用");
 
