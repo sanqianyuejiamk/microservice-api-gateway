@@ -24,7 +24,7 @@ public class AccessFilter extends ZuulFilter {
      */
     @Override
     public String filterType() {
-        return ZuulFilterTypeEnums.PRE.name();
+        return ZuulFilterTypeEnums.PRE.getName();
     }
 
     /**
@@ -34,7 +34,7 @@ public class AccessFilter extends ZuulFilter {
      */
     @Override
     public int filterOrder() {
-        return 0;
+        return 50000;
     }
 
     /**
@@ -44,7 +44,7 @@ public class AccessFilter extends ZuulFilter {
      */
     @Override
     public boolean shouldFilter() {
-        return true;
+        return RequestContext.getCurrentContext().getRequest().getRequestURI().matches("/user/.*");
     }
 
     @Override

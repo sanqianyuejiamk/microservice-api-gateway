@@ -35,4 +35,12 @@ public enum ZuulFilterTypeEnums {
         }
         return null;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
 }

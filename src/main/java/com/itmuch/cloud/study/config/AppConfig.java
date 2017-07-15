@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean
-    public AccessFilter accessFilter(){
+    public AccessFilter accessFilter() {
         return new AccessFilter();
     }
 }
