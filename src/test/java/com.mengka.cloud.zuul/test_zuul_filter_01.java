@@ -32,4 +32,11 @@ public class test_zuul_filter_01 {
         JSONObject jsonObject = JSON.parseObject(result);
         assertEquals("Jerry", jsonObject.getString("username"));
     }
+
+    @Test
+    public void test_zuul_token_filter_02() {
+        log.info("test_zuul_token_filter_02..");
+        Response response = RestAssured.get("http://127.0.0.1:8050/user/2");
+        assertEquals(401, response.getStatusCode());
+    }
 }
